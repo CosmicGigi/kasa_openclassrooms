@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 50px 50px 0 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 20px 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 15px 15px 0 15px;
+  }
+}

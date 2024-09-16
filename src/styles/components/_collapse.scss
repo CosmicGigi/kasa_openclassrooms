@@ -1,0 +1,159 @@
+.collapseabout {
+  padding: 0 175px;
+}
+
+.collapse {
+  margin-bottom: 30px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    background: #ff6060;
+    border-radius: 5px;
+    position: relative;
+
+    h1 {
+      font-weight: 500;
+      color: white;
+      font-size: 24px;
+      padding: 0 15px;
+    }
+  }
+
+  &__toggle-icon {
+    color: white;
+    transition: transform 0.3s ease;
+    padding: 0 15px;
+    cursor: pointer;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out,
+      background-color 0.5s ease-out;
+    opacity: 0;
+    border-radius: 0 0 5px 5px;
+
+    &--open {
+      max-height: 1000px;
+      opacity: 1;
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__content-inner {
+    padding: 20px;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    transform: translateY(-10px);
+    transition: transform 0.5s ease-out;
+
+    .collapse__content--open & {
+      transform: translateY(0);
+    }
+  }
+}
+
+.housing {
+  &__collapses {
+    display: flex;
+    justify-content: space-between;
+
+    .collapse {
+      width: 48%;
+
+      &__header {
+        height: 52px;
+
+        h1 {
+          font-size: 18px;
+        }
+      }
+
+      &__content-inner {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapseabout {
+    padding: 0;
+  }
+
+  .collapse {
+    &__header {
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    &__content-inner {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .collapseabout {
+    padding: 0;
+  }
+
+  .collapse {
+    &__header {
+      height: 30px;
+
+      h1 {
+        font-size: 13px;
+      }
+    }
+
+    &__toggle-icon {
+      img {
+        width: 15px;
+      }
+    }
+
+    &__content-inner {
+      font-size: 12px;
+      line-height: 17px;
+      padding: 15px;
+    }
+  }
+
+  .housing {
+    &__collapses {
+      flex-direction: column;
+
+      .collapse {
+        width: 100%;
+        margin-bottom: 20px;
+
+        &__header {
+          height: 20px;
+
+          h1 {
+            font-size: 13px;
+          }
+        }
+
+        &__content-inner {
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}

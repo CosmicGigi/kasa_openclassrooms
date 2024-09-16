@@ -1,0 +1,41 @@
+.footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #000000;
+  margin-top: 50px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 66px 0 29px;
+    box-sizing: border-box;
+
+    &--logo {
+      margin-bottom: 28.56px;
+
+      img {
+        width: 122px;
+        height: 39.44px;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &--title {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__container {
+      padding: 62px 0;
+
+      &--title {
+        font-size: 12px;
+      }
+    }
+  }
+}
