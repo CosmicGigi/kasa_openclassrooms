@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Housing from "./pages/Housing";
+import data from "./data/logements.json";
 
 const App = () => {
   return (
