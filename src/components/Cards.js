@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import axios from "axios";
+import logements from "../data/logements.json";
 
 const Cards = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(logements);
   useEffect(() => {
-    axios.get("./logements.json").then((res) => setData(res.data));
+    setData(logements);
   }, []);
 
   return (

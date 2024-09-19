@@ -8,7 +8,7 @@ const navLinks = [
   { path: "/about", label: "A propos" },
 ];
 
-const Banner = () => {
+const Header = () => {
   return (
     <div className="header">
       <Link to="/">
@@ -31,4 +31,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Header;
